@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
 
         // This is the MediaSource representing the media to be played.
-//        MediaSource videoSource = new ExtractorMediaSource(Uri.parse("http://html5demos.com/assets/dizzy.mp4"), dataSourceFactory, extractorsFactory, null, null);
-        MediaSource videoSource = new HlsMediaSource(Uri.parse("http://html5demos.com/assets/dizzy.mp4"), dataSourceFactory, 1, null, null);
+        MediaSource videoSource = new ExtractorMediaSource(Uri.parse("http://html5demos.com/assets/dizzy.mp4"), dataSourceFactory, extractorsFactory, null, null);
         // Prepare the player with the source.
         player.prepare(videoSource);
         player.setPlayWhenReady(true);
